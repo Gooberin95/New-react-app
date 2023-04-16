@@ -1,10 +1,12 @@
 import React from "react"; 
+import HornedBeast from "./HornedBeast";
 
 class Main extends React.Component {
     render() {
         return(
             <>
-                <h1>Students of 301</h1>
+            <HornedBeast/>
+
             
             </>
         )
