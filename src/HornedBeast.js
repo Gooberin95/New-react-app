@@ -6,7 +6,7 @@ class HornedBeast extends React.Component {
         return(
             <>
                 <h2>GoatandHorns</h2>
-                <img> {this.props.title}</img>
+                <img src={this.props.imageUrl}/>
                 <p>{this.props.description}</p>            
             </>
         )
