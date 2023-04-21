@@ -1,5 +1,5 @@
-
 import React from "react"; 
+import Button from "react-bootstrap/Button";
 
 class HornedBeast extends React.Component {
     constructor(props) {
@@ -17,12 +17,12 @@ class HornedBeast extends React.Component {
     render() {
         return(
             <>
-            <div>
+            <div direction = "horizontal" gap = {3}>
                 
                 <h2>{this.props.title}</h2>
                 <img src={this.props.imageUrl}/>
                 <p>{this.props.description}</p>
-                <button onClick={this.addToFavNum}>Click here to like</button>
+                <Button variant="primary" onClick={this.addToFavNum}>Click here to favorite this</Button>
                 <p>{this.state.favnum}</p>  
             </div>       
             </>

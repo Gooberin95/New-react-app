@@ -1,6 +1,8 @@
 import React from "react"; 
 import HornedBeast from "./HornedBeast";
 import Banan from "./data.json";
+import Button from "react-bootstrap/Button";
+
 
 class Main extends React.Component {
     render() {
