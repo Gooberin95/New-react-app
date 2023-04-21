@@ -1,8 +1,9 @@
-import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
+import data from "./data.json";
 import React from "react"; 
 
 class HornedBeast extends React.Component {
     render() {
+
         return(
             <>
                 <h2>{this.props.title}</h2>
