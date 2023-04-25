@@ -3,14 +3,15 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import "./Main.css";
-
+import BeastModal from "./BeastModal";
+import banan from "./data.json";
 
 
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.setState = {
+    this.state = {
       student: {},
       showModal: false
     }
@@ -22,20 +23,28 @@ class App extends React.Component {
   hideBeastModal = () => {
     this.setState({showModal: false})
   }
+  selectedBeast = (beastObj) => {
+    this.setState({student: beastObj})
+  }
   render() {
     return(
       <>
         <div className="Rhinos">
         <Header/>
-        <Main/>
-      
-        <Footer/>
+        <Main
+          showBeastModal={this.showBeastModal}
+          selectedBeast={this.selectedBeast}
+        />
+        <BeastModal
+          showModal={this.state.showModal}
+        />
         </div>
+        <Footer/>
       </>
     )
   }
 }
-
+ 
 
 export default App; 
 

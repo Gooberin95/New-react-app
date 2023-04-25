@@ -10,8 +10,10 @@ class Main extends React.Component {
             <HornedBeast 
             title={thing.title}
             imageUrl={thing.image_url}
-            student={student}
+            student={thing}
+            showBeastModal={this.props.showBeastModal}
             description={thing.description}
+            showStudentModal={this.props.showStudentModal}
             />)
 
 

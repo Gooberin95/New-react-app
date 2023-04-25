@@ -1,13 +1,13 @@
 import React from "react"; 
-import Modal from "react-bootstrap/Modal";
+import { Modal } from "react-bootstrap";
 class BeastModal extends React.Component {
     render() {
         return(
             <>
-              <Modal>
+              <Modal show={this.props.showModal}>
                 <Modal.Header closeButton>
                 <Modal.Body>Hello and then i arrived oh what a day</Modal.Body>
-                <Modal.Title>Woah</Modal.Title>
+                <Modal.Title>{this.props.selectedBeast}</Modal.Title> 
                 </Modal.Header>
              </Modal>
                 
@@ -17,4 +17,4 @@ class BeastModal extends React.Component {
     }
 }
 
-export default BeastModal;
+export default BeastModal
