@@ -17,16 +17,16 @@ class HornedBeast extends React.Component {
         })
     }
 
-    // handleModalEvent = () => {
-    //     this.props.selectedBeast(this.props.selectedBeast);
-    //     this.props.showBeastModal();
-    // }
+    handleModalEvent = () => {
+        this.props.selectedBeast(this.props.Beast);
+        this.props.showBeastModal();
+    }
     
     render(){
         return(
             <>  
             <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={this.props.imageUrl} onClick={this.props.showBeastModal} />
+            <Card.Img variant="top" src={this.props.imageUrl} onClick={this.handleModalEvent} />
             <Card.Body>
                 <Card.Title>{this.props.title}</Card.Title>
                 <Card.Text>
