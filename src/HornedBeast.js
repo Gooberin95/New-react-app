@@ -1,6 +1,5 @@
 import React from "react"; 
-import Button from "react-bootstrap/Button";
-
+import {Card, Button} from "react-bootstrap";
 class HornedBeast extends React.Component {
     constructor(props) {
         super(props);
@@ -16,15 +15,26 @@ class HornedBeast extends React.Component {
     }
     render() {
         return(
-            <>
-            <div direction = "horizontal" gap = {3}>
+            <>  
+            <Card style={{ width: '18rem' }}>
+            <Card.Img variant={this.props.imageUrl}/>
+            <Card.Body>
+                <Card.Title>{this.props.title}</Card.Title>
+                <Card.Text>
+                {this.state.favnum}
+                </Card.Text>
+                <Button variant="primary" onClick={this.addToFavNum}>Go somewhere</Button>
+                <p>{this.state.favnum}</p>
+            </Card.Body>
+            </Card>
+            {/* <div direction = "horizontal" gap = {3}>
                 
                 <h2>{this.props.title}</h2>
                 <img src={this.props.imageUrl}/>
                 <p>{this.props.description}</p>
                 <Button variant="primary" onClick={this.addToFavNum}>Click here to favorite this</Button>
                 <p>{this.state.favnum}</p>  
-            </div>       
+            </div>        */}
             </>
         )
     }
