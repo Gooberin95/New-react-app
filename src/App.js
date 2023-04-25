@@ -15,7 +15,13 @@ class App extends React.Component {
       showModal: false
     }
     }
-  
+  showBeastModal = () => {
+    this.setState({ showModal: true})
+  }
+
+  hideBeastModal = () => {
+    this.setState({showModal: false})
+  }
   render() {
     return(
       <>
