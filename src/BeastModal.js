@@ -1,12 +1,13 @@
 import React from "react"; 
-import { Modal } from "react-bootstrap";
+import { Button,  Modal } from "react-bootstrap";
 class BeastModal extends React.Component {
     render() {
+        console.log(this.props.Beast);
         return(
             <>
               <Modal show={this.props.showModal} onHide={this.props.hideBeastModal}>
                 <Modal.Header closeButton>
-                <Modal.Body>{this.props.Beast.description}</Modal.Body>
+                <Modal.Body><img src={this.props.Beast.image_url} alt={this.props.Beast.title} /> {this.props.Beast.description}</Modal.Body>
                 <Modal.Title></Modal.Title> 
                 </Modal.Header>
              </Modal>
@@ -17,4 +18,4 @@ class BeastModal extends React.Component {
     }
 }
 
-export default BeastModal
+export default BeastModal;

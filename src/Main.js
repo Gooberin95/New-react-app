@@ -12,8 +12,8 @@ class Main extends React.Component {
             <HornedBeast 
 
                 title={thing.title}
-                imageUrl={thing.image_url}
                 Beast={thing}
+                imageUrl={thing.image_url}
                 selectedBeast={this.props.selectedBeast}
                 showBeastModal={this.props.showBeastModal}
                 hideBeastModal={this.props.hideBeastModal}
@@ -32,4 +32,4 @@ class Main extends React.Component {
     }
 }
 
-export default Main
+export default Main;
