@@ -33,10 +33,11 @@ class App extends React.Component {
         <Header/>
         <Main
           showBeastModal={this.showBeastModal}
-          selectedBeast={this.selectedBeast}
+          hideBeastModal={this.hideBeastModal}
         />
         <BeastModal
           showModal={this.state.showModal}
+          hideBeastModal={this.hideBeastModal}
         />
         </div>
         <Footer/>

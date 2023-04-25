@@ -17,10 +17,10 @@ class HornedBeast extends React.Component {
         })
     }
 
-    handleModalEvent = () => {
-        this.props.selectedBeast(this.props.selectedBeast);
-        this.props.showBeastModal();
-    }
+    // handleModalEvent = () => {
+    //     this.props.selectedBeast(this.props.selectedBeast);
+    //     this.props.showBeastModal();
+    // }
     
     render(){
         return(

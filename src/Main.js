@@ -12,6 +12,7 @@ class Main extends React.Component {
             imageUrl={thing.image_url}
             student={thing}
             showBeastModal={this.props.showBeastModal}
+            hideBeastModal={this.props.hideBeastModal}
             description={thing.description}
             showStudentModal={this.props.showStudentModal}
             />)
