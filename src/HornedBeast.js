@@ -1,6 +1,6 @@
 import React from "react"; 
 import {Card, Button} from "react-bootstrap";
-import Modal from "react-bootstrap/Modal";
+
 
 
 class HornedBeast extends React.Component {
@@ -16,17 +16,14 @@ class HornedBeast extends React.Component {
             favnum: this.state.favnum + 1
         })
     }
-    Example = () => {
-        const [show,setShow] = useState(false);
-        const handleClose = () => setShow(false);
-        const handleShow = () => setShow(true);
-        
+
     
-    render() {
+    
+    render(){
         return(
             <>  
             <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" onClick={handleShow} src={this.props.imageUrl}/>
+            <Card.Img variant="top" src={this.props.imageUrl}/>
             <Card.Body>
                 <Card.Title>{this.props.title}</Card.Title>
                 <Card.Text>
@@ -40,6 +37,7 @@ class HornedBeast extends React.Component {
         )
     }
 }
-}
+
+
 
 export default HornedBeast
