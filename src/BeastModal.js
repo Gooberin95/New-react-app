@@ -1,4 +1,5 @@
 import React from "react"; 
+import "./Main.css";
 import { Button,  Modal } from "react-bootstrap";
 class BeastModal extends React.Component {
     render() {
@@ -7,7 +8,7 @@ class BeastModal extends React.Component {
             <>
               <Modal show={this.props.showModal} onHide={this.props.hideBeastModal}>
                 <Modal.Header closeButton>
-                <Modal.Body><img src={this.props.Beast.image_url} alt={this.props.Beast.title} /> {this.props.Beast.description}</Modal.Body>
+                <Modal.Body><img src={this.props.Beast.image_url} alt={this.props.Beast.title} width='100px' height='300px' /> {this.props.Beast.description}</Modal.Body>
                 <Modal.Title></Modal.Title> 
                 </Modal.Header>
              </Modal>
