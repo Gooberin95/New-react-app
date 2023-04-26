@@ -1,5 +1,7 @@
 import React from "react"; 
-import Button from "react-bootstrap/Button";
+import {Card, Button} from "react-bootstrap";
+
+
 
 class HornedBeast extends React.Component {
     constructor(props) {
@@ -14,20 +16,31 @@ class HornedBeast extends React.Component {
             favnum: this.state.favnum + 1
         })
     }
-    render() {
+
+    handleModalEvent = () => {
+        this.props.selectedBeast(this.props.Beast);
+        this.props.showBeastModal();
+    }
+    
+    render(){
         return(
-            <>
-            <div direction = "horizontal" gap = {3}>
-                
-                <h2>{this.props.title}</h2>
-                <img src={this.props.imageUrl}/>
-                <p>{this.props.description}</p>
-                <Button variant="primary" onClick={this.addToFavNum}>Click here to favorite this</Button>
-                <p>{this.state.favnum}</p>  
-            </div>       
+            <>  
+            <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={this.props.imageUrl} onClick={this.handleModalEvent} />
+            <Card.Body>
+                <Card.Title>{this.props.title}</Card.Title>
+                <Card.Text>
+                {this.state.favnum}
+                </Card.Text>
+                <Button variant="primary" onClick={this.addToFavNum}>Go somewhere</Button>
+                <p>{this.state.favnum}</p>
+            </Card.Body>
+            </Card>
             </>
         )
     }
 }
 
-export default HornedBeast
+
+
+export default HornedBeast;

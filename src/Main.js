@@ -1,25 +1,35 @@
 import React from "react"; 
 import HornedBeast from "./HornedBeast";
 import Banan from "./data.json";
-import Button from "react-bootstrap/Button";
+
 
 
 class Main extends React.Component {
-    render() {
+    render()
+     {
+        
         const theAnimals = Banan.map(thing =>
             <HornedBeast 
-            title={thing.title}
-            imageUrl={thing.image_url}
-            description={thing.description}
+
+                title={thing.title}
+                Beast={thing}
+                imageUrl={thing.image_url}
+                selectedBeast={this.props.selectedBeast}
+                showBeastModal={this.props.showBeastModal}
+                hideBeastModal={this.props.hideBeastModal}
+                description={thing.description}
+                showStudentModal={this.props.showStudentModal}
+                
             />)
-
-
-        return(
+            
+            return(
+               
             <>
+            
             {theAnimals}
             </>
         )
     }
 }
 
-export default Main
+export default Main;
