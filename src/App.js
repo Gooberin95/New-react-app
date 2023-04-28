@@ -4,7 +4,7 @@ import Main from "./Main";
 import Footer from "./Footer";
 import "./Main.css";
 import BeastModal from "./BeastModal";
-import Form from "./Form.js";
+import { Form } from "react-bootstrap";
 import specificHorns from "./data.json";
 
 
@@ -77,6 +77,7 @@ class App extends React.Component {
           showBeastModal={this.showBeastModal}
           hideBeastModal={this.hideBeastModal}
           selectedBeast={this.selectedBeast}
+          specificHorns={this.state.specificHorns}
         />
         <BeastModal
           showModal={this.state.showModal}
