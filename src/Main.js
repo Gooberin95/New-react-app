@@ -20,6 +20,7 @@ class Main extends React.Component {
                 description={thing.description}
                 showStudentModal={this.props.showStudentModal}
                 
+                
             />)
             
             return(

@@ -6,9 +6,9 @@ class BeastModal extends React.Component {
         console.log(this.props.Beast);
         return (
             <>
-                <Form.Select aria-label="Default select example">
+                <Form.Select aria-label="Default select example" onChange={this.specificHorns}>
                     <option>Open this select menu</option>
-                    <option value="1">One Horn</option>
+                    <option value="1" >One Horn</option>
                     <option value="2">Two Horns</option>
                     <option value="3">Three Horns</option>
                     <option value="4">One Hundred Horns</option>
