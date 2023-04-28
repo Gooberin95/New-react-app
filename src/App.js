@@ -4,7 +4,7 @@ import Main from "./Main";
 import Footer from "./Footer";
 import "./Main.css";
 import BeastModal from "./BeastModal";
-
+import Form from "./Form.js";
 
 
 
@@ -32,6 +32,7 @@ class App extends React.Component {
       
         <div className="Rhinos">
         <Header/>
+        <Form />
         <Main
           showBeastModal={this.showBeastModal}
           hideBeastModal={this.hideBeastModal}
