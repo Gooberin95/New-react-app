@@ -62,14 +62,17 @@ class App extends React.Component {
       
         <div className="Rhinos">
         <Header/>
-        <Form.Select aria-label="Default select example" onChange={this.superHorns}>
-          <option>Open this select menu</option>
-          <option value="1" >One Horn</option>
-          <option value="2">Two Horns</option>
-          <option value="3">Three Horns</option>
-          <option value="4">One Hundred Horns</option>
-        </Form.Select>
-        <Form />
+        <Form>
+          <Form.Group>
+            <Form.Label>Choose Team</Form.Label>
+            <Form.Select onChange={this.changeTeam}>
+              <option value='1'>One Horn</option>
+              <option value="2">Two Horns</option>
+              <option value="3">Three Horns</option>
+              <option value="100">One Hundred Horns</option>
+            </Form.Select>
+          </Form.Group>
+        </Form>
         <Main
           showBeastModal={this.showBeastModal}
           hideBeastModal={this.hideBeastModal}
