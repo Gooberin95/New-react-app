@@ -1,6 +1,7 @@
 import React from "react"; 
 import HornedBeast from "./HornedBeast";
-import Banan from "./data.json";
+
+import "./Main.css";
 
 
 
@@ -8,7 +9,7 @@ class Main extends React.Component {
     render()
      {
         
-        const theAnimals = Banan.map(thing =>
+        const theAnimals = this.props.specificHorns.map(thing =>
             <HornedBeast 
 
                 title={thing.title}
@@ -19,6 +20,9 @@ class Main extends React.Component {
                 hideBeastModal={this.props.hideBeastModal}
                 description={thing.description}
                 showStudentModal={this.props.showStudentModal}
+                specificHorns={this.props.horns}
+
+
                 
             />)
             
